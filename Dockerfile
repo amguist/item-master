@@ -27,6 +27,7 @@ RUN addgroup -S -g 10001 appGrp \
 
 USER 10000
 
-ENTRYPOINT exec java $JAVA_OPTS \
+ENTRYPOINT
+ exec java $JAVA_OPTS \
 -XX:+UseContainerSupport \
 -jar /opt/app/app.jar
