@@ -8,6 +8,8 @@ COPY . .
 RUN echo "Setting up git configuration .... "
 RUN git config --global user.email "rhon.guist@gmail.com"
 RUN git config --global user.name "amguist0821"
+RUN git remote add origin git@github.com:amguist/item-master.git
+RUN git push origin master
 RUN echo "Beginning to build product ..... Goals: ${mvnGoals}"
 RUN mvn -B -e -f /app/pom.xml ${mvnGoals}
 RUN echo "Preparing for release .... Goals: ${mvnPrepareGoals}"
