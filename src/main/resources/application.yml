@@ -1,0 +1,18 @@
+info:
+  app:
+    version: ^project.version^
+
+org:
+  sl4j:
+    simpleLogger:
+      logFile: System.out
+
+management:
+  health.defaults.enabled: true
+  endpoint:
+    shutdown.enabled: false
+    health:
+      show-details: always
+  endpoints:
+    enabled-by-default: true
+    web.exposure.include: "*"

@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  server:
+    container_name: item-master
+    build: .
+    ports:
+      - 8080:8080
+      - 8000:8000
+    environment:
+      CATALINA_OPTS: |-
+        -Dspring.profiles.active=dev
+      JAVA_TOOL_OPTIONS: -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n
