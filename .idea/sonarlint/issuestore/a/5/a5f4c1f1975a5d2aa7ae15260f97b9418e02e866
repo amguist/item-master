@@ -1,0 +1,9 @@
+
+3
+java:S1165"Make this "code" field final.(²âèú
+5
+java:S1165"Make this "errors" field final.(òºÌ¦
+>
+java:S1068"(Remove this unused "code" private field.(²âèú
+@
+java:S1068"*Remove this unused "errors" private field.(òºÌ¦
