@@ -5,6 +5,12 @@ ARG mvnGoals="clean package"
 ARG mvnPrepareGoals="release:prepare -DskipTests=true"
 WORKDIR /app
 COPY . .
+
+RUN git config --global committer.email "noreply@github.com"
+RUN git config --global committer.name "GitHub"
+RUN git config --global author.email "${GITHUB_ACTOR}@users.noreply.github.com"
+RUN git config --global author.name "${GITHUB_ACTOR}"
+
 RUN echo "Setting up git configuration .... "
 RUN echo "Beginning to build product ..... Goals: ${mvnGoals}"
 RUN mvn -B -e -f /app/pom.xml ${mvnGoals}

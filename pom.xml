@@ -16,6 +16,7 @@
     <scm>
         <developerConnection>scm:git:https://github.com/amguist/item-master.git</developerConnection>
         <connection>scm:git:https://github.com/amguist/item-master.git</connection>
+        <tag>HEAD</tag>
     </scm>
 
     <parent>
